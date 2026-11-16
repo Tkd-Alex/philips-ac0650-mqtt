@@ -130,7 +130,7 @@ philips-ac0650 ha-bridge --mqtt-host localhost --mqtt-port 1883 --mqtt-user your
 
 This publishes Home Assistant discovery configs under `homeassistant/` and creates:
 
-- **Fan entity** — power on/off, speed percentage (1-16 mapped to 0-100%), preset modes (auto/sleep/turbo)
+- **Fan entity** — power on/off, speed (raw 1-16 on the state topic; HA maps it to 0-100% via `speed_range_min`/`speed_range_max`), preset modes (auto/sleep/turbo)
 - **Clean Filter sensor** — filter life percentage
 - **HEPA Filter sensor** — filter life percentage
 - **Reset Clean Filter button** — resets the clean filter timer
